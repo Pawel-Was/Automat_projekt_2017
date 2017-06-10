@@ -3,6 +3,7 @@
 #include "headers.h"
 
 using namespace std;
+int Automat::getilosc_produktow();
 
 
 string Automat::policz_plik(string path)
@@ -32,11 +33,11 @@ string Automat::policz_plik(string path)
 int Automat::glowne_menu() 
 {
 	char klawisz='w';
-	int wybor;
+	int wybor=0;
 	while (klawisz != 'q') 
 	{
 		cout << "Produkty: \n";
-		for (int i = 1; i <= this->getilosc_produktow; i++)
+		for (int i = 1; i <= this->getilosc_produktow(); i++)
 		{
 			// ENDED HERE
 		}
