@@ -1,3 +1,5 @@
 Dopisaæ:
 main menu ( wybieranie produktu z obiektu produkt)
+pobieranie linii z pliku i sortowanie danych
+wyswietlanie glownego ui
 dalej xD

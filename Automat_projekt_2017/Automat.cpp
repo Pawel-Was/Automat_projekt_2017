@@ -3,14 +3,13 @@
 #include "headers.h"
 
 using namespace std;
-int Automat::getilosc_produktow();
 
-
-string Automat::policz_plik(string path)
+// liczy produkty w pliku
+string Automat::policz_plik()
 {
 	string linia;
 	ifstream plik;
-	plik.open(path.c_str(), ios::in);
+	plik.open(this->sciezka.c_str(), ios::in);
 	if (plik.good())
 	{
 
@@ -22,10 +21,12 @@ string Automat::policz_plik(string path)
 			if (linia == "")
 				break;
 		}
+		plik.close();
 		return "Otwarto plik pomyslnie oraz zapisano iloœæ do glownego modulu";
 	}
 	else
 	{
+		plik.close();
 		return "Nie udalo sie otworzyc pliku";
 	}
 }
@@ -51,7 +52,28 @@ int Automat::glowne_menu()
 	return wybor;
 
 }
-
+// zwraca ilosc produktow
 int Automat::getilosc_produktow() {
 	return this->ilosc_produktow;
+}
+void Automat::setsciezka(string path) {
+	this->sciezka = path;
+
+}
+string Automat::getsciezka() {
+	return this->sciezka;
+}
+
+
+// Wczytuje plik ze sciezki/dane do wektora produktow
+vector<Produkt> Automat::wczytaj_produkty() {
+	vector<Produkt> lokalny_wektor;
+	ifstream plik;
+	string linia;
+	plik.open(this->sciezka.c_str(),ios::in);
+
+
+
+	return lokalny_wektor;
+
 }
