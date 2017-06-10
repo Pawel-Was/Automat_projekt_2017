@@ -1,0 +1,11 @@
+#pragma once
+class Nominaly;
+class Produkt;
+class Automat;
+#include "automat.h"
+#include "nominaly.h"
+#include "produkt.h"
+#include <string>
+#include <conio.h>
+#include <Windows.h>
+void init();
