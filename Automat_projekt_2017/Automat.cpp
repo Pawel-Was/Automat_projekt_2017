@@ -23,7 +23,7 @@ string Automat::policz_plik()
 
 		}
 		plik.close();
-		return "Otwarto plik pomyslnie oraz zapisano iloœæ do glownego modulu";
+		return "Otwarto plik pomyslnie oraz zapisano ilosc do glownego modulu";
 	}
 	else
 	{
@@ -32,15 +32,16 @@ string Automat::policz_plik()
 	}
 }
 
-int Automat::glowne_menu() 
+/*int Automat::glowne_menu() 
 {
 	char klawisz='w';
 	int wybor=0;
 	while (klawisz != 'q') 
 	{
 		cout << "Produkty: \n";
-		for (int i = 1; i <= this->getilosc_produktow(); i++)
+		for (int i = 0; i < this->getilosc_produktow(); i++)
 		{
+			cout << wektor_produktow[i].getNazwa() << endl;
 			// ENDED HERE
 		}
 
@@ -49,11 +50,14 @@ int Automat::glowne_menu()
 
 
 		klawisz = _getch();
+		system("cls");
 	}
 	return wybor;
 
-}
-// zwraca ilosc produktow
+}*/
+
+
+// Accesors
 int Automat::getilosc_produktow() {
 	return this->ilosc_produktow;
 }
@@ -70,14 +74,29 @@ string Automat::getsciezka() {
 vector<Produkt> Automat::wczytaj_produkty(int ile) {
 	vector<Produkt> lokalny_wektor;
 	ifstream plik;
-	string linia;
+	string bufor_nazwa;
+	int bufor_ilosc;
+	double bufor_cena;
+	bool bufor_czy_uzup;
 	plik.open(this->sciezka.c_str(),ios::in);
+	// cout <<  endl << this->getilosc_produktow() << endl; debug
 	for (int i = 0; i < ile; i++)
 	{
-
+		plik >> bufor_nazwa;
+		plik >> bufor_ilosc;
+		plik >> bufor_cena;
+		plik >> bufor_czy_uzup;
+		lokalny_wektor.push_back(Produkt(bufor_nazwa, bufor_ilosc, bufor_cena, bufor_czy_uzup));
+		//cout << lokalny_wektor[i].getNazwa() << " ";
+		//cout << lokalny_wektor[i].getIlosc() << " ";
+		//cout << lokalny_wektor[i].getCena() << " ";
+		//cout << lokalny_wektor[i].getCzy_uzup() << " " << endl;
 	}
 
 
 	return lokalny_wektor;
 
 }
+
+
+// Wypisuje produkty i pozwala wybraæ 

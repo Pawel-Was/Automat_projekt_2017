@@ -13,18 +13,18 @@ string flaga_zdarzenia; // PRZECHOWUJE GLOBALNE FLAGI ZDARZENIA
 
 int main() {
 	Automat main_module; // G³ówny obiekt
-	main_module.setsciezka("Automat.txt");
+	main_module.setsciezka("Automat.txt"); // Sciezka
 	flaga_zdarzenia = main_module.policz_plik();
-	cout << flaga_zdarzenia << "\n wykryta ilosc produktow: " << main_module.getilosc_produktow();
-	Sleep(2000);
+	init(main_module.getsciezka(),flaga_zdarzenia,main_module.getilosc_produktow());
+	Sleep(4000);
 	system("cls");
-	init(); // Copyright i duperele (Functions.cpp)
-//	main_module.wektor_produktow = main_module.wczytaj_produkty();
+ 	main_module.wektor_produktow =  main_module.wczytaj_produkty(main_module.getilosc_produktow());
+	glowne_menu(main_module);
 
 
 
 
-	cout << "\n\nNacisnij dowlony klawisz";
+	cout << "\n\nNacisnij dowolny klawisz";
 	_getch();
 
 }

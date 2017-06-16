@@ -15,7 +15,7 @@ using namespace std;
 	void Produkt::setCzy_uzup(bool war) {
 		this->Czy_uzup = war;
 	}
-	//Getters
+	//######################################
 	double Produkt::getCena() {
 		return this->Cena;
 	}
@@ -27,4 +27,18 @@ using namespace std;
 	}
 	bool Produkt::getCzy_uzup() {
 		return this->Czy_uzup;
+	}
+	Produkt::Produkt(string nazwa ,int ilosc ,double cena ,bool Czy_uzup)
+	{
+		this->setNazwa(nazwa);
+		this->setIlosc(ilosc);
+		this->setCena(cena);
+		this->setCzy_uzup(Czy_uzup);
+	}
+	Produkt::Produkt()
+	{
+		this->setNazwa("");
+		this->setIlosc(0);
+		this->setCena(0.0);
+		this->setCzy_uzup(false);
 	}

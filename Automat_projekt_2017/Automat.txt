@@ -1,16 +1,11 @@
 CocaCola 20 2.2 0
 Snickers 20 2.3 0
-Mars 20 20 2.3 0
 Twix 20 2.3 0
 Woda 20 1.7 0
 Powerade 20 3.0 0
 Sprite 20 2.2 0
 7days 20 2.5 0
 Kanapka 10 2.0 0
+Tiger 15 3.0 0
+Mars 20 2.3 0
 #
-
-
-
-
-
-

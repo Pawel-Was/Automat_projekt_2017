@@ -1,4 +1,5 @@
 #pragma once
+//#include <string>
 class Produkt {
 
 public:
@@ -12,6 +13,8 @@ public:
 	int getIlosc();
 	std::string getNazwa();
 	bool getCzy_uzup();
+	Produkt(std::string nazwa, int ilosc, double cena, bool Czy_uzup);
+	Produkt();
 private:
 	double Cena;
 	int Ilosc;
