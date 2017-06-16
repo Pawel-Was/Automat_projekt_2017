@@ -9,4 +9,5 @@ class Automat;
 #include <conio.h>
 #include <Windows.h>
 void init(std::string path,std::string flaga, int ilosc);
+void uzupelnij(Automat &autom);
 void glowne_menu(Automat &autom);

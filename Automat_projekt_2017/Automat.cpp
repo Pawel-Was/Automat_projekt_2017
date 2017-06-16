@@ -97,6 +97,18 @@ vector<Produkt> Automat::wczytaj_produkty(int ile) {
 	return lokalny_wektor;
 
 }
+// Wykrywa potrzebne uzupelnienie i stosuje je
+void Automat::uzupelnienie()
+{
+	for (int i = 0; i <this->getilosc_produktow(); i++)
+	{
+		if (this->wektor_produktow[i].getCzy_uzup() == true)
+		{
+			this->wektor_produktow[i].setIlosc(10);
+			this->wektor_produktow[i].setCzy_uzup(false);
+		}
+	}
+}
 
 
 // Wypisuje produkty i pozwala wybraæ 

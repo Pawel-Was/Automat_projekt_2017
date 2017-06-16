@@ -7,20 +7,15 @@
 using namespace std;
 class Automat {
 public:
-	string policz_plik();
-	//int glowne_menu();
-	int getilosc_produktow();
 	vector<Produkt> wektor_produktow;
 
 
+	string policz_plik();
+	int getilosc_produktow();
 	vector<Produkt> wczytaj_produkty(int ile);
-
-
-
-
+	void uzupelnienie();
 	void setsciezka(string path);
 	string getsciezka();
-
 private:
 	fstream plik;
 	string sciezka;

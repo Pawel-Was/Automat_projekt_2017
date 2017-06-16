@@ -1,5 +1,4 @@
 Dopisaæ:
-main menu ( wybieranie produktu z obiektu produkt)
-pobieranie linii z pliku i sortowanie danych
-wyswietlanie glownego ui
-dalej xD
+-System pobioru pieniêdzy oraz wydawania reszty
+-Odejmowanie zakupu od iloœci produktów
+-Zapisywanie stanu wektora do pliku ( Przepisanie pliku)
