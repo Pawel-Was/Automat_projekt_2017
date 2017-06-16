@@ -16,10 +16,11 @@ string Automat::policz_plik()
 		while(!plik.eof())
 		{
 			getline(plik, linia);
+			if (linia == "#")
+				break;
 			++this->ilosc_produktow;
 			// cout << this-> ilosc_produktow << ": " <<  linia << endl; //KONTROLNE WYPISANIE PLIKU
-			if (linia == "")
-				break;
+
 		}
 		plik.close();
 		return "Otwarto plik pomyslnie oraz zapisano iloœæ do glownego modulu";
@@ -66,12 +67,15 @@ string Automat::getsciezka() {
 
 
 // Wczytuje plik ze sciezki/dane do wektora produktow
-vector<Produkt> Automat::wczytaj_produkty() {
+vector<Produkt> Automat::wczytaj_produkty(int ile) {
 	vector<Produkt> lokalny_wektor;
 	ifstream plik;
 	string linia;
 	plik.open(this->sciezka.c_str(),ios::in);
+	for (int i = 0; i < ile; i++)
+	{
 
+	}
 
 
 	return lokalny_wektor;

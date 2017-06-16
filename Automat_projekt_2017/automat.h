@@ -11,7 +11,11 @@ public:
 	int glowne_menu();
 	int getilosc_produktow();
 	vector<Produkt> wektor_produktow;
-	vector<Produkt> wczytaj_produkty();
+	vector<Produkt> wczytaj_produkty(int ile);
+
+
+
+
 	void setsciezka(string path);
 	string getsciezka();
 
